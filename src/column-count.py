@@ -1,12 +1,7 @@
-import os.path
-
-# By using relative path to open the csv file
-my_path = os.path.abspath(os.path.dirname(__file__))
-path = os.path.join(my_path, "../data/uszips.csv")
-# Arguments are passed here
-arg1 = path
-arg2 = "zip"
-arg3 = "00601"
+import csv
+#Arguments are passed here <filename><column1>
+arg1 = sys.argv[1]
+arg2 = sys.argv[2]
 # Reading the data in csv file
 with open(arg1, "r") as csvfile:
     data = csvfile.read()
