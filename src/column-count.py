@@ -1,4 +1,4 @@
-import csv
+import sys
 #Arguments are passed here <filename><column1>
 arg1 = sys.argv[1]
 arg2 = sys.argv[2]
