@@ -2,8 +2,13 @@ import csv, time
 import sys
 import psycopg2
 import os
-
+#Arguments are passed here<filename>
 arg1 = sys.argv[1]
+#To ensure giving correct arguments
+if len(sys.argv) < 2:
+    print("Please provide input argument:filename")
+    sys.exit()
+
 
 
 # To get Elapsed time to read given csv file
@@ -30,7 +35,7 @@ print(b >> 20)
 # To get word count of csv file
 with open(arg1, "r") as tetris:
     data = tetris.read()
-res = len(data.split())
+res = len(data.split("\n"))
 print ("The word count is:" + str(res))
 
 # To import data into postgres database by establishing the conn

@@ -1,7 +1,16 @@
 import sys
+
 #Arguments are passed here <filename><column1>
 arg1 = sys.argv[1]
 arg2 = sys.argv[2]
+
+#To ensure that arguments are passed
+if len(sys.argv) < 2:
+    print("Please provide input argument:filename,column1")
+elif len(sys.argv) > 3:
+    print("Index out of range")
+    sys.exit()
+
 # Reading the data in csv file
 with open(arg1, "r") as csvfile:
     data = csvfile.read()
